@@ -3,6 +3,8 @@ const Campsite = require('../models/campsite');
 
 const campsiteRouter = express.Router();
 
+const authenticate = require('../authenticate');
+
 campsiteRouter
   .route('/:campsiteId/comments')
   .get((req, res, next) => {
